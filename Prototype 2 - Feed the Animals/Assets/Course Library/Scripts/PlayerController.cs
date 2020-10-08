@@ -4,20 +4,17 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    // Speed the player moves at
     public float speed = 20.0f;
+    // Variable for boundries
     public float bounds = 24.0f;
+    // Sets up variable for movement
     private float horizontalInput;
-    
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
     // Update is called once per frame
     void Update()
     {
-        // Collerct input data
+        // Collect input data
         horizontalInput = Input.GetAxis("Horizontal");
         
         // Moves player left and right
