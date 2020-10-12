@@ -11,6 +11,8 @@ public class PlayerController : MonoBehaviour
     // Sets up variable for movement
     private float horizontalInput;
 
+    public GameObject projectilePrefab;
+
     // Update is called once per frame
     void Update()
     {
@@ -28,6 +30,13 @@ public class PlayerController : MonoBehaviour
         if(transform.position.x > bounds)
         {
             transform.position = new Vector3(bounds,transform.position.y,transform.position.z);
+        }
+
+        // Shoots projectile on space
+        if(Input.GetKeyDown(KeyCode.Space))
+        {
+            // Launch a projectile from the player
+            Instantiate(projectilePrefab,transform.position,projectilePrefab.transform.rotation);
         }
     }
 }

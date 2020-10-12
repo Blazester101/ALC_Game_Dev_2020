@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class OutOfBounds : MonoBehaviour
+public class OutofBounds : MonoBehaviour
 {
     // Variables for bounds
     public float topBounds = -15.0f;
