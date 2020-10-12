@@ -10,9 +10,9 @@ public class SpawnManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDpwm(KeyCode.S))
+        if(Input.GetKeyDown(KeyCode.S))
         {
-            instantiate(animalPrefabs[animalIndex],new Vector3(0,0,-5),animalPrefabs[animalIndex].transform.rotation)
+            Instantiate(animalPrefabs[animalIndex],new Vector3(0,0,-5),animalPrefabs[animalIndex].transform.rotation);
         }
     }
 }
