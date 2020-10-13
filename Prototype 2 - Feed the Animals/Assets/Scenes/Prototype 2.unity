@@ -603,8 +603,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animalPrefabs:
+  - {fileID: 564262510433047087, guid: c381944dffab0c04aafe05914f4e8350, type: 3}
+  - {fileID: 7877573101400232585, guid: 95452be7953df0342bb35132b0134fdf, type: 3}
+  - {fileID: 6968434863707308887, guid: 3e9d2e40941788340b3bba98f14354cf, type: 3}
   - {fileID: 7293518839892826666, guid: 6cb8923d11e47427195da6f13e6b3939, type: 3}
-  animalIndex: 0
+  animalIndex: 1
 --- !u!4 &1203731367
 Transform:
   m_ObjectHideFlags: 0
@@ -613,7 +616,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1203731365}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.310319, y: 5.0139184, z: 2.4167633}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
