@@ -940,6 +940,7 @@ GameObject:
   - component: {fileID: 6968434865121345568}
   - component: {fileID: 6968434865121345567}
   - component: {fileID: 6968434865121345570}
+  - component: {fileID: -4502850756857224038}
   m_Layer: 0
   m_Name: Animal_Horse_Brown
   m_TagString: Untagged
@@ -997,8 +998,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 30, z: 0}
-  m_Center: {x: 0, y: 15, z: 0}
+  m_Size: {x: 11.25, y: 36.5, z: 43.125}
+  m_Center: {x: 0, y: 18.25, z: 4.25}
 --- !u!114 &6968434865121345567
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1011,7 +1012,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a18b1bf8afac54c1ab06c1ea2b88688f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
+  speed: 20
 --- !u!114 &6968434865121345570
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1026,6 +1027,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   topBounds: -15
   lowerBounds: 35
+--- !u!54 &-4502850756857224038
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6968434863707308887}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &6968434863707314957
 GameObject:
   m_ObjectHideFlags: 0
