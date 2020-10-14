@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 170076734}
-  m_IndirectSpecularColor: {r: 0.44657975, g: 0.49641424, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657958, g: 0.49641395, b: 0.5748171, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -586,7 +586,7 @@ GameObject:
   m_Layer: 0
   m_Name: Animal Spawner
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 2974397684917235467, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -607,7 +607,6 @@ MonoBehaviour:
   - {fileID: 7877573101400232585, guid: 95452be7953df0342bb35132b0134fdf, type: 3}
   - {fileID: 6968434863707308887, guid: 3e9d2e40941788340b3bba98f14354cf, type: 3}
   - {fileID: 7293518839892826666, guid: 6cb8923d11e47427195da6f13e6b3939, type: 3}
-  animalIndex: 1
 --- !u!4 &1203731367
 Transform:
   m_ObjectHideFlags: 0
