@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class DetectCollisions : MonoBehaviour
 {
+    // Destroy animals and wine on collisions
     void OnTriggerEnter(Collider other)
     {
         Destroy(gameObject);

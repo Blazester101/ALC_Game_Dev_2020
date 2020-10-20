@@ -13,14 +13,11 @@ public class SpawnManager : MonoBehaviour
     private float startDelay = 2.0f;
     private float spawnInterval = 1.5f;
 
-    public float difficultyIncreaseDelay = 1.5f;
-
     // Start is called before the first frame update
     void Start()
     {
         // Adds automatic spawning
         InvokeRepeating("SpawnRandomAnimals", startDelay, spawnInterval);
-        InvokeRepeating("DifficultyIncrease", difficultyIncreaseDelay, difficultyIncreaseDelay);
     }
 
     // Spawns animals randomly
@@ -31,10 +28,5 @@ public class SpawnManager : MonoBehaviour
         int animalIndex = Random.Range(0, animalPrefabs.Length);
         // Instantiates the animals
         Instantiate(animalPrefabs[animalIndex], spawnPos, animalPrefabs[animalIndex].transform.rotation);
-    }
-
-    void DifficultyIncrease()
-    {
-        spawnIntervalCopy = spawnInterval * (50 / 100);
     }
 }
