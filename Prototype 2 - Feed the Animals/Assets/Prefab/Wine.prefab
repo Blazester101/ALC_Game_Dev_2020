@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 9159966419960433970}
   - component: {fileID: 9159966419960433983}
   - component: {fileID: 9159966419960433973}
+  - component: {fileID: -4415465570855419839}
   m_Layer: 0
   m_Name: Wine
   m_TagString: Untagged
@@ -142,6 +143,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   topBounds: -15
   lowerBounds: 35
+--- !u!114 &-4415465570855419839
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9159966418796770982}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 783980f6d770548be909bbc87e393e5e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &9159966418222540396
 PrefabInstance:
   m_ObjectHideFlags: 0

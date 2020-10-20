@@ -5,9 +5,9 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     // Speed the player moves at
-    public float speed = 20.0f;
+    private float speed = 20.0f;
     // Variable for boundries
-    public float bounds = 24.0f;
+    private float bounds = 24.0f;
     // Sets up variable for movement
     private float horizontalInput;
 

@@ -10,15 +10,31 @@ public class SpawnManager : MonoBehaviour
     private float spawnRangeX = 20.0f;
     private float spawnPosZ = -5.0f;
 
-    // Update is called once per frame
-    void Update()
+    private float startDelay = 2.0f;
+    private float spawnInterval = 1.5f;
+
+    public float difficultyIncreaseDelay = 1.5f;
+
+    // Start is called before the first frame update
+    void Start()
     {
-        if(Input.GetKeyDown(KeyCode.S))
-        {
-            // Randomly generate animal index and spawn position
-            Vector3 spawnPos = new Vector3(Random.Range(-spawnRangeX, spawnRangeX), 0, spawnPosZ);
-            int animalIndex = Random.Range(0, animalPrefabs.Length);
-            Instantiate(animalPrefabs[animalIndex], spawnPos, animalPrefabs[animalIndex].transform.rotation);
-        }
+        // Adds automatic spawning
+        InvokeRepeating("SpawnRandomAnimals", startDelay, spawnInterval);
+        InvokeRepeating("DifficultyIncrease", difficultyIncreaseDelay, difficultyIncreaseDelay);
+    }
+
+    // Spawns animals randomly
+    void SpawnRandomAnimals()
+    {
+        // Randomly generate animal index and spawn position
+        Vector3 spawnPos = new Vector3(Random.Range(-spawnRangeX, spawnRangeX), 0, spawnPosZ);
+        int animalIndex = Random.Range(0, animalPrefabs.Length);
+        // Instantiates the animals
+        Instantiate(animalPrefabs[animalIndex], spawnPos, animalPrefabs[animalIndex].transform.rotation);
+    }
+
+    void DifficultyIncrease()
+    {
+        spawnIntervalCopy = spawnInterval * (50 / 100);
     }
 }

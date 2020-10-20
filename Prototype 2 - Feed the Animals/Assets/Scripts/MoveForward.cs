@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class MoveForward : MonoBehaviour
 {
-    // Speed of gameObjects
+    // Base speed of gameObjects
     public float speed = 10.0f;
 
     // Update is called once per frame
