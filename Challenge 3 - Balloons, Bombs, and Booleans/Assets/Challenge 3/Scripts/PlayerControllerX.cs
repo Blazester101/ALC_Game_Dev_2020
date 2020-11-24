@@ -28,6 +28,8 @@ public class PlayerControllerX : MonoBehaviour
         Physics.gravity *= gravityModifier;
         playerAudio = GetComponent<AudioSource>();
 
+        isLowEnough = true;
+
         // Apply a small upward force at the start of the game
         playerRb.AddForce(Vector3.up * 7, ForceMode.Impulse);
 
@@ -37,13 +39,10 @@ public class PlayerControllerX : MonoBehaviour
     void Update()
     {
         // Checks if player is low enough.
-        if (transform.position.y < 14.5)
+        if (transform.position.y >= 14.5)
         {
-            isLowEnough = true;
-        }
-        else
-        {
-            isLowEnough = false;
+            playerRb.velocity *= 0;
+            playerRb.AddForce(Vector3.up * -2, ForceMode.Impulse);
         }
 
         // While space is pressed and player is low enough, float up
@@ -71,9 +70,13 @@ public class PlayerControllerX : MonoBehaviour
             fireworksParticle.Play();
             playerAudio.PlayOneShot(moneySound, 1.0f);
             Destroy(other.gameObject);
-
         }
 
+        // if player collides with ground, bounce
+        else if (other.gameObject.CompareTag("Ground") && !gameOver)
+        {
+            playerRb.AddForce(Vector3.up * 10, ForceMode.Impulse);
+        }
     }
 
 }
