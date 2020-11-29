@@ -1,0 +1,23 @@
+﻿* = Current Lab Goals
+
+
+Player Controller Plans: Incomplete
+    Constraints: Incomplete
+        * Can't move off edge: Incomplete
+        * Obstacles block movement: Incomplete
+
+    Movement: Incomplete
+        * Arrow Movement: Complete
+        * WASD Movement: Complete
+
+    Aiming: Incomplete
+        Mouse Control: Incomplete
+    
+    Attacking: Incomplete
+        Shooting: Incomplete
+        Slashing: Incomplete
+        Punching: Incomplete
+
+
+Other Plans: Incomplete
+    * Camera Position: Incomplete
