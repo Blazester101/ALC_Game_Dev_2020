@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    private float speed = 25.0f;
+    private float speed = 10.0f;
+    private float bounds = 20;
     
     private float horizontalInput;
     private float verticalInput;
@@ -25,5 +26,22 @@ public class PlayerController : MonoBehaviour
         transform.Translate(Vector3.forward * Time.deltaTime * speed * verticalInput);
         // Moves the player left and right based on horizontalInput
         transform.Translate(Vector3.right * Time.deltaTime * speed * horizontalInput);
+
+        if(transform.position.x < -bounds)
+        {
+            transform.position = new Vector3(-bounds,transform.position.y,transform.position.z);
+        }
+        if(transform.position.x > bounds)
+        {
+            transform.position = new Vector3(bounds,transform.position.y,transform.position.z);
+        }
+        if(transform.position.z < -bounds)
+        {
+            transform.position = new Vector3(transform.position.x,transform.position.y,-bounds);
+        }
+        if(transform.position.z > bounds)
+        {
+            transform.position = new Vector3(transform.position.x,transform.position.y,bounds);
+        }
     }
 }

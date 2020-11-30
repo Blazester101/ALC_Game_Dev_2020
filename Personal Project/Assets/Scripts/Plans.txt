@@ -3,12 +3,13 @@
 
 Player Controller Plans: Incomplete
     Constraints: Incomplete
-        * Can't move off edge: Incomplete
-        * Obstacles block movement: Incomplete
+        * Can't move off edge: Complete
+        * Obstacles block movement: Semi-Complete
 
     Movement: Incomplete
         * Arrow Movement: Complete
         * WASD Movement: Complete
+        Improved 8 Directional Movement: Incomplete
 
     Aiming: Incomplete
         Mouse Control: Incomplete
@@ -19,5 +20,5 @@ Player Controller Plans: Incomplete
         Punching: Incomplete
 
 
-Other Plans: Incomplete
-    * Camera Position: Incomplete
+Other Plans: Complete
+    * Camera Position: Complete
