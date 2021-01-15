@@ -56,7 +56,7 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
-    public void StartGame(int difficulty)
+    public void StartGame(float difficulty)
     {
         isGameActive = true;
         score = 0;
@@ -66,5 +66,6 @@ public class GameManager : MonoBehaviour
         UpdateScore(0);
 
         titleScreen.gameObject.SetActive(false);
+        scoreText.gameObject.SetActive(true);
     }
 }
