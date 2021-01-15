@@ -8,7 +8,7 @@ public class DifficultyButton : MonoBehaviour
     private Button button;
     private GameManager gameManager;
 
-    public float difficultyFactor;
+    public float difficulty;
     public string difficultyName;
 
     // Start is called before the first frame update
@@ -22,6 +22,6 @@ public class DifficultyButton : MonoBehaviour
 
     void SetDifficulty()
     {
-        gameManager.StartGame(difficultyFactor, difficultyName);
+        gameManager.StartGame(difficulty, difficultyName);
     }
 }

@@ -14,8 +14,8 @@ public class GameManager : MonoBehaviour
     public GameObject titleScreen;
     public GameObject highscoresScreen;
     public bool isGameActive;
+    private int targetsListSize;
     private int score;
-    private string difficulty;
     private float spawnRate = 1.0f;
 
     IEnumerator SpawnTarget()
@@ -23,7 +23,7 @@ public class GameManager : MonoBehaviour
         while(isGameActive)
         {
             yield return new WaitForSeconds(spawnRate);
-            int index = Random.Range(0, targets.Count);
+            int index = Random.Range(0, targetsListSize);
             Instantiate(targets[index]);
         }
     }
@@ -46,23 +46,28 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
-    public void StartGame(float difficultyFactor, string difficultyName)
+    public void StartGame(float difficulty, string difficultyName)
     {
         isGameActive = true;
+        targetsListSize = targets.Count;
         score = 0;
-        difficulty = difficultyName;
-        spawnRate /= difficultyFactor;
+        spawnRate /= difficulty;
+
+        if(difficultyName == "Easy")
+        {
+            targets.RemoveAt(targetsListSize - 1);
+        }
+        else if(difficultyName == "Impossible")
+        {
+            GameObject lastTarget = targets[targetsListSize - 1];
+            targets.Add(lastTarget);
+        }
         
         StartCoroutine(SpawnTarget());
         UpdateScore(0);
+        
 
         titleScreen.gameObject.SetActive(false);
         scoreText.gameObject.SetActive(true);
-    }
-
-    public void HighscoresScreen()
-    {
-        titleScreen.gameObject.SetActive(false);
-        highscoresScreen.gameObject.SetActive(true);
     }
 }
